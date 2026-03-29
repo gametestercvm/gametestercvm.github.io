@@ -3,20 +3,13 @@
 <head>
     <title>watch gametester's music channel ONLIEN</title>
     <h1>watch music channel ONLIEN</h1>
-    <script src="https://cdn.jsdelivr.net"></script>
+    <script src="//site.com/playerjs.js" type="text/javascript"></script>
 </head>
 <body>
-    <video id="video" controls autoplay width="640"></video>
-    <script>
-      var video = document.getElementById('video');
-      var videoSrc = 'https://meditation-graph-maintained-rebel.trycloudflare.com/iptv/session/1/hls.m3u8';
-      if (Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource(videoSrc);
-        hls.attachMedia(video);
-      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = videoSrc;
-      }
-    </script>
+   <div id="player"></div>
+
+<script>
+   var player = new Playerjs({id:"player", file:"https://newbie-rain-there-professionals.trycloudflare.com/iptv/session/1/hls.m3u8"});
+</script>
 </body>
 </html>
